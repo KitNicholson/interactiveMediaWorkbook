@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitNicholson_OnlineWorkbook</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <script>
+      function hideEntry(entryId, buttonId) {
+
+        const weeklyEntry = document.getElementsByClassName("weeklyEntry");
+        for (let i=0; i < weeklyEntry.length; i++) {
+          let entry = weeklyEntry[i];
+          if (entry.style.display !== "none") {
+            entry.style.display = "none";
+          }
+        }
+
+        if (entryId !== '0') {
+          document.getElementById(entryId).style.display = "block";
+        }
+
+        const allButtons = document.getElementsByClassName("weekBox");
+        for (let i=0; i < allButtons.length; i++) {
+          let b = allButtons[i];
+          if (b.style.display === "none") {
+            b.style.display = "block";
+          }
+        }
+
+        console.log(buttonId);
+
+        document.getElementById(buttonId).style.display = "none";
+
+      }
+      </script>
+
+  </head>
+
+  <body>
+   
+    <div class="line"></div>
+
+    <div class="topText">
+        <h6> INTERACTIVE MEDIA</h6>
+        <h6> KIT NICHOLSON</h6>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 class="weeklyEntry" id="1" style="color: aqua;"> WEEK 1</h1>
+    <h1 class="weeklyEntry" id="2" style="color: chartreuse;"> WEEK 2</h1>
+    <h1 class="weeklyEntry" id="3" style="color: crimson;"> WEEK 3</h1>
+
+    <div class="centerRow">
+      <div class="line"></div>
+      <div class="flexbox-container">
+        <button class="weekBox" id="b0" style="display: none; background-color: black;" onclick="hideEntry('0','b0')"> <h6 style="color: black;">HOME</h6> </button>
+        <button class="weekBox" id="b1" onclick="hideEntry('1','b1')"> <h6>WEEK 1</h6> </button>
+        <button class="weekBox" id="b2" onclick="hideEntry('2','b2')"> <h6>WEEK 2</h6> </button>
+        <button class="weekBox" id="b3" onclick="hideEntry('3','b3')"> <h6>WEEK 3</h6> </button>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="box"></div>
+
+  </body>
+
+</html>
