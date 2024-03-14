@@ -1,0 +1,77 @@
+/* styles */
+
+body {
+    background-image: url('Img/Image_Background_Edit.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    overflow: hidden;
+}
+
+.topText {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+}
+
+h6 {
+    font-family: tahoma;
+    color: white;
+    margin-top: 10px;
+}
+
+.line {
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+}
+
+.centerRow {
+
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    margin-top: -50px;
+    width: 100%;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.75;
+    
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    /* height: 100px; */
+    justify-content: space-between;
+    padding: 10px;
+
+    /* background-color: blue; */
+
+}
+
+.weekBox {
+
+    display: "block";
+
+    width: 200px;
+    height: 50px;
+
+    background-color: rgb(0, 0, 0);
+
+    /* border-style: solid;
+    border-color: white;
+    border-width: 1px; */
+
+    text-align: center;
+}
+
+/* .weekBox :hover{
+    width: 200px;
+    background-color: rgb(179, 179, 179);
+} */
+
+.weeklyEntry {
+    font-size: 100px;
+    display: none;
+}
