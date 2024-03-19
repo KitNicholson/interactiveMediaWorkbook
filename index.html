@@ -13,18 +13,19 @@
     <script>
       function hideEntry(entryId, buttonId) {
 
+        // hide all week entries
         const weeklyEntry = document.getElementsByClassName("weeklyEntry");
         for (let i=0; i < weeklyEntry.length; i++) {
           let entry = weeklyEntry[i];
-          if (entry.style.display !== "none") {
-            entry.style.display = "none";
-          }
+          entry.style.display = "none";
         }
 
+        // show chosen entry
         if (entryId !== '0') {
           document.getElementById(entryId).style.display = "block";
         }
 
+        // show all buttons
         const allButtons = document.getElementsByClassName("weekBox");
         for (let i=0; i < allButtons.length; i++) {
           let b = allButtons[i];
@@ -33,12 +34,11 @@
           }
         }
 
-        console.log(buttonId);
-
+        // hide current webpage button
         document.getElementById(buttonId).style.display = "none";
 
       }
-      </script>
+    </script>
 
   </head>
 
@@ -51,26 +51,258 @@
         <h6> KIT NICHOLSON</h6>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <h1 class="weeklyEntry" id="1" style="color: aqua;"> WEEK 1</h1>
-    <h1 class="weeklyEntry" id="2" style="color: chartreuse;"> WEEK 2</h1>
-    <h1 class="weeklyEntry" id="3" style="color: crimson;"> WEEK 3</h1>
-
     <div class="centerRow">
       <div class="line"></div>
-      <div class="flexbox-container">
-        <button class="weekBox" id="b0" style="display: none; background-color: black;" onclick="hideEntry('0','b0')"> <h6 style="color: black;">HOME</h6> </button>
-        <button class="weekBox" id="b1" onclick="hideEntry('1','b1')"> <h6>WEEK 1</h6> </button>
-        <button class="weekBox" id="b2" onclick="hideEntry('2','b2')"> <h6>WEEK 2</h6> </button>
-        <button class="weekBox" id="b3" onclick="hideEntry('3','b3')"> <h6>WEEK 3</h6> </button>
+      <div class="flexbox-container" id="cenR">
+        <button class="weekBox" id="b0" style="display: none;" onclick="hideEntry('0','b0')"> <h5>HOME</h5> </button>
+        <button class="weekBox" id="b1" onclick="hideEntry('w1','b1')"><h5>WEEK 1</h5> </button>
+        <button class="weekBox" id="b2" onclick="hideEntry('w2','b2')"> <h5>WEEK 2</h5> </button>
+        <button class="weekBox" id="b3" onclick="hideEntry('w3','b3')"> <h5>WEEK 3</h5> </button>
       </div>
       <div class="line"></div>
     </div>
     <div class="box"></div>
+
+    <div class="weeklyEntry" id="w1"> 
+      <div class="contentRow" id="w1">
+        <div class="line"></div>
+        <div class="flexbox-container" id="conR">
+
+          <h1 style="width: 500px;"> &nbsp; Week 1 </h1>
+          
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 420px;"> 
+            The first thing I did for this class was to watch some movies, yay! out of 
+            the 4 recommended I chose Minority report and Iron man. 
+            <br>
+            <br>
+            Minority Report, based on the Philip K Dick novel of the same name, 
+            looked closely at the cultural implications of technology. What institutions 
+            are built around technology? Who uses new drugs and how? Are decisions made 
+            using only data fair and unbiased? 
+            <br>
+            <br>
+            Iron man has some commentary on the military industrial complex but is more 
+            interested in the physical realities of possible technology. How do we touch it? 
+            What is it like to wear? How can it improve our physical capabilities?
+          </p>
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 200px;"> In class that week we started thinking about the web. What do websites currently 
+            look like and how do we currently interact with them. To develop this we had an 
+            exercise to sketch a site based off a randomly generated prompt.</p>
+          <img class="contentImg" src="img/textPrompt.jpg" alt="Pencil sketch for a website"> 
+          <p style="width: 200px;">I can’t remember our prompt exactly but it was something like; 
+            <br> 
+            <br>
+            - A cloud based <br> 
+            - To do list <br> 
+            - For musicians
+          </p>
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 400px;"> Finally this week I played with html to produce a hello world sketch. I have tried 
+            learning html once before and so had some familiarity with the concept of tags. 
+            However I found html unwieldy. Using it felt like turning pre-determined settings on 
+            and off. This made development slow and not very expressive. Building this sketch was 
+            a re-introduction to html and a first time foray into CSS, exploring what can be done 
+            in these languages.
+          </p>
+          <img src="img/Hello_World.png" alt="A coding environment with the related webpage on the right">
+        
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="weeklyEntry" id="w2"> 
+      <div class="contentRow" id="w1">
+        <div class="line"></div>
+        <div class="flexbox-container" id="conR">
+
+          <h1 style="width: 500px;"> &nbsp; Week 2 </h1>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 200px;">
+            Week 2 began with a quick exercise of crazy eights to get us thinking about 
+            how our website could look and function. Designs where meant to be fast and 
+            rough to produce a variety of ideas. 
+          </p>
+          <img class="contentImg" src="img/Crazy_Eights1.jpg" alt="Eight sketches of possible website layouts">
+          <img class="contentImg" src="img/Crazy_Eights2.jpg" alt="Eight sketches of possible website layouts">
+          <p style="width: 400px;">
+            After making these sketches we had to make a paper prototype of the website, 
+            including some interactivity. The easy and carefree attitude I had from the crazy 
+            eights vanished and I put way too much pressure on myself to create a design that 
+            would be interesting visually and conceptually. To get around this and make 
+            <i>something</i> I reworked one of the crazy eights ideas. A long thin centre line 
+            that I found visually compelling.  
+          </p>
+          <img class="contentImg" src="img/Website_Mockup1.jpg" alt="Paper mockup for a website">
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 293px;">
+            After class this week I started building the website in VS code. Having already 
+            built the Hello World site made starting a new html document a lot less scary, even 
+            if I still didn’t know how to make it look the way I wanted. I wasn’t in the habit 
+            of taking screengrabs of when I started the site but it looked pretty rough. I also 
+            had a million tabs open from googling “how to do &lt;blank&gt; in html/CSS”. It felt 
+            like very slowly chipping away at a rock. Eventually I figured out how to link p5.js 
+            to html with a coding train tutorial and got it looking like this. --&gt;
+          </p>
+          <img class="contentImg" src="img/Web_Dev1.png" alt="A work in progress version of this site">
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 250px;">
+            Indirect inspirations for this site come from Ryoji Ikeda and 
+            Nonotak who’s work I adore. Both of their aesthetics feel tech heavy but I believe 
+            that is a result of heavy use of geometry and systems rather than an obsession with 
+            tech. 
+          </p> 
+          <img class="conceptImg" src="img/Ryoji_Ikeda.jpg" alt="A work by Ryoji Ikeda">
+          <p style="width: 260px;">
+            Both also examine interactions between music and light in 
+            immersive installations (there is an interesting proposition, is immersion a form 
+            interactivity?). Both also work almost exclusively in black and white which I find 
+            to be almost a cliché of technology. 
+          </p>
+          <img class="conceptImg" src="img/Nonotak.jpg" alt="A work performance by Nonotak">
+          <p style="width: 260px;">
+            I deliberately wanted to avoid this black and white cliché by using colour. I didn’t know how until I 
+            stumbled on these incredible images of the microscopic structures of alcohol. I 
+            believe the background of this site is a close up of a pina colada. On the right is Bourbon.
+          </p>
+          <img class="conceptImg" src="img/Mirco_Alcohol.jpg" alt="Alcohol under a microscope">
+
+
+            
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="weeklyEntry" id="w3"> 
+      <div class="contentRow" id="w1">
+        <div class="line"></div>
+        <div class="flexbox-container" id="conR">
+
+          <h1 style="width: 500px;"> &nbsp; Week 3 </h1>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 350px;">
+            Before class this week I managed to steal some time to visit Execute_Photography at 
+            the RMIT gallery. It was smaller than I expected but the works all had quite a bit 
+            of depth. Several of the works were interactive if in quite different ways, and two 
+            of the curators where present to introduce the exhibition and after giving some time 
+            to view the works answer questions. 
+          </p>
+          <img class="contentImg" src="img/Execute_Photography1.jpg" alt="Execute_Photography at RMIT Gallery">
+          <img class="contentImg" src="img/Execute_Photography3.jpg" alt="Execute_Photography at RMIT Gallery">
+          <p style="width: 250px;">
+            It got me thinking about how people produce and 
+            interact with photography on scale. Everyone making and sharing images via the 
+            internet. Huge digital collections ripe for mining freely given. It’s democratic, 
+            it’s been taken advantage of.
+          </p>
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 140px;">
+            In class this week the idea of responsive design was introduced. How will our 
+            websites look on a phone or tablet vs a computer which most of us are designing 
+            for. Resizing the window to phone proportions produced this --&gt;
+          </p>
+          <img class="contentImg" src="img/Web_Dev_Phone1.png" alt="A janky looking site on mobile">
+          <p style="width: 150px;">
+            I made a couple quick sketches about how I might like the site to look like on 
+            mobile. These also solved the problem of where/how to add the weekly content to the 
+            site, as until then it was just the centre line.
+          </p>
+          <img class="contentImg" src="img/Mobile_Sketch.jpg" alt="Pen sketch of this site for moblie">
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 640px;">
+            Feels Good Man is a documentary I found by accident that looks at how the character Pepe, 
+            create by cartoonist Matt Furie, ended up on the list of international hate symbols. This character 
+            was turned into various memes by the now notorious website 4chan and warped into a 
+            character that represented their self-proclaimed losser-dom. People outside of 4chan 
+            discovered Pepe and 4chan-ers retaliated by making the memes too offensive to be 
+            appropriated. This creates a double bind, you can’t criticize the image for being 
+            politically incorrect as ‘it’s just a joke, we don’t really mean it’ but also they do 
+            really mean it. Trump runs for president of the USA and becomes the loser president to 
+            ruin America for the online NEETs. The online trolling Pepe as a symbol facilitates is now 
+            brought into real world politics. Pepe memes flood the media with shit and warp objective 
+            truth. Somewhere around this point Pepe ends up on the list of hate symbols and their 
+            creator Matt Furie is fighting desperately to get them back/off the list. The most effective 
+            measure is to sue anyone using Pepe on commercial products such as on posters from the 
+            channel Info Wars. Finally out of nowhere Pepe pops up as a symbol used by the protestors 
+            for democracy in Hong Kong??? 
+          </p>
+          <img class="contentImg" src="img/FGM1.png" alt="Pepe saying the line 'Feels Good Man'">
+          <p style="width: 200px;">
+            It’s a fascinating and horrifying look at online culture and the influence of the 
+            internet. How identities naturally form online and then reach back out into the 
+            world. The internet isn’t separate to the physical world but is instead part of a 
+            feedback loop involving it.
+          </p>
+          <img class="contentImg" src="img/FGM2.png" alt="Pepe on 4chan">
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 300px;">
+            I did a bit more work on the website, notably I started trying to add 
+            content to the page. Because of this I had to change the layout to 
+            fit longer blocks of text and have images at a reasonable size. 
+            I’ve only got the one screengrab from this process because when I get 
+            in the zone of coding I kind of forget to take them. Every change 
+            seems minute and the website looks/functions essentially the same, so 
+            I move on to the next problem that bugs me. Then when there’s 
+            nothings left to bug me it’s 3hours later and I have a “finished 
+            product” (for now) with development documented.
+          </p>
+          <img class="contentImg" src="img/web dev2.png" alt="This website nearing completion for assignment 2A">
+          <p style="width: 400px;">
+            Whilst we were advised to clearly plan this website and then try and create 
+            that I find I’m not making sketches, instead working from a loose vision in 
+            my head. It seems pretty clear to me so what makes it ‘loose’ is that I 
+            often change it on implementation. If it’s not working visually or is 
+            proving difficult to code I’ll change it something that actually works. 
+            Yes I could forget my vision but I find if I focus on the same problem/process 
+            I end up a the same answer.
+          </p>
+          <br>
+          <p>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|</p>
+          <br>
+          <p style="width: 400px;">
+            Youtube recommended me a 1hour lecture on the properties of paper and folding 
+            and it was great. Incredibly dense with information but wonderfully in quickly 
+            and visually expressing complicated mathematical ideas. I was really enjoyed 
+            maths in high school and took the hardest maths class I could for my final 
+            year. I’m glad I did it, and when it finished I knew I never needed to do maths 
+            again. This lecture taps into all the stuff I find fascinating about maths 
+            (beautiful closed systems that can explain the world around us) 
+            explained in largely intuitive ways with interactive demonstrations. What I 
+            would like to be able to do in this class is to visualise systems and give 
+            people the ability to interact with them. 
+          </p>
+          <img class="contentImg" src="img/Tadashi_Tokieda1.png">
+          <img class="contentImg" src="img/Tadashi_Tokieda2.png">
+
+          <p style="width: 250px;">
+            And of course I had to pause the lecture halfway through to make my own <br>Miura-ori fold!
+          </p>
+          <img class="conceptImg" src="img/Miura_Ori.jpg" alt="A pretty amature Miura Ori fold">
+           
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
 
   </body>
 
