@@ -6,6 +6,8 @@ body {
     background-size: 100vw 100vh;
 
     overflow: hidden;
+
+    cursor: crosshair;
 }
 
 .topText {
@@ -15,10 +17,34 @@ body {
     
 }
 
+h1 {
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 90pt;
+    color: white;
+
+    flex-basis: 1;
+    flex-shrink: 0;
+}
+
 h6 {
     font-family: tahoma;
     color: white;
     margin-top: 10px;
+}
+
+h5 {
+    font-family: tahoma;
+    color: white;
+    font-size: 10pt;
+}
+
+p {
+    font-family: tahoma;
+    color: white;
+    font-size: 10pt;
+
+    flex-basis: 1;
+    flex-shrink: 0;
 }
 
 .line {
@@ -29,47 +55,99 @@ h6 {
 .centerRow {
 
     position: fixed;
-    top: 50%;
+    bottom: 3vh;
     left: 0%;
     margin-top: -50px;
     width: 100%;
 
     background-color: rgb(0, 0, 0);
-    opacity: 0.75;
+    opacity: 0.9;
     
+}
+
+.contentRow {
+    position: fixed;
+    bottom: 19.5vh;
+    left: 0%;
+    width: 100%;
+
+    background-color: black;
+    opacity: 0.95;    
+}
+
+.contentImg {
+    width: auto;
+    max-height: 100%;
 }
 
 .flexbox-container {
     display: flex;
     flex-direction: row;
     /* height: 100px; */
-    justify-content: space-between;
+    
     padding: 10px;
 
     /* background-color: blue; */
 
 }
 
-.weekBox {
+#cenR {
+    justify-content: space-between;
+}
+
+#conR {
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* height: 34vh; */
+    height: 240px;
+
+    gap: 10px;
+
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    -webkit-scrollbar-button: none;
+
+}
+
+/* .weekBox {
 
     display: "block";
+    /* text-align: center; -/
 
     width: 200px;
-    height: 50px;
+    height: 60px;
+
 
     background-color: rgb(0, 0, 0);
 
-    /* border-style: solid;
-    border-color: white;
-    border-width: 1px; */
+    border-style: none;
+    /* border-color: white; -/
 
-    text-align: center;
+} */
+
+button {
+    display: "block";
+    /* text-align: center; */
+
+    width: 200px;
+    height: 60px;
+
+
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(0, 0, 0);
+
+    border-style: none;
+    /* border-color: white; */
 }
 
-/* .weekBox :hover{
-    width: 200px;
-    background-color: rgb(179, 179, 179);
-} */
+button:hover{
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    /* background-color: rgb(137, 137, 137); */
+    
+}
 
 .weeklyEntry {
     font-size: 100px;
