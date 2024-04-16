@@ -1,0 +1,199 @@
+/* styles */
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    overflow: hidden;
+
+    cursor: crosshair;
+}
+
+.topText {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 5px;
+    
+    height: 25px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 90pt;
+    color: white;
+
+    flex-basis: 1;
+    flex-shrink: 0;
+}
+
+h6 {
+    font-family: tahoma;
+    color: white;
+    margin-top: 0px;
+    line-height: 25px;
+}
+
+h5 {
+    font-family: tahoma;
+    color: white;
+    font-size: 10pt;
+
+    line-height: 100%;
+}
+
+a {
+    color: rgb(188, 241, 241);
+}
+
+p {
+    font-family: tahoma;
+    color: white;
+    font-size: 10pt;
+
+    flex-basis: 1;
+    flex-shrink: 0;
+}
+
+.line {
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+}
+
+.topRow {
+    position: fixed;
+    top: 2vh;
+    left: 0%;
+    width: 100vw;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.94;
+}
+
+/* #mainMenu {
+    top: 48vh;
+} */
+
+.weekRow {
+
+    position: fixed;
+    top: 90vh;
+    left: 0%;
+    margin-top: -50px;
+    width: 100%;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.94;
+    
+}
+
+.contentRow {
+    position: fixed;
+    bottom: 19.5vh;
+    left: 0%;
+    width: 100%;
+
+    background-color: black;    
+}
+
+.contentImg {
+    width: auto;
+    max-height: 100%;
+}
+
+.contentImg:hover {
+    /* position: fixed;
+    top: 10vh;
+    left: 10vh;
+    max-height: 80vh; */
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+
+    cursor: pointer;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    
+    padding: 10px;
+
+}
+
+#cenR {
+    justify-content: space-between;
+}
+
+#conR {
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* height: 34vh; */
+    height: 240px;
+
+    gap: 10px;
+
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    -webkit-scrollbar-button: none;
+}
+
+#menR {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    gap: 20px;
+
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    -webkit-scrollbar-button: none;
+}
+
+button {
+    display: "block";
+    text-align: center;
+
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+
+    background-color: black;
+
+    border-style: none;
+    /* border-color: white; */
+}
+
+button:hover{
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    /* background-color: rgb(137, 137, 137); */
+    
+}
+
+.weeklyEntry {
+    font-size: 100px;
+    display: none;
+}
+
+.sketchBackground {
+    width: 102vw;
+    height: 102vh;
+    border: none;
+
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+}
+
+/* for some reason I can't figure out this is necessary to get the cursor i want on iframes */
+.invisibleDiv {
+    width: 90vw;
+    height: 100vh;
+    border: none;
+
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+}
