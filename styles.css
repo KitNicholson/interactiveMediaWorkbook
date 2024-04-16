@@ -1,7 +1,7 @@
 /* styles */
 
 body {
-    background-image: url('img/Background.jpg');
+    background-color: black;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 
@@ -14,7 +14,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    margin: 5px;
     
+    height: 25px;
 }
 
 h1 {
@@ -29,13 +31,20 @@ h1 {
 h6 {
     font-family: tahoma;
     color: white;
-    margin-top: 10px;
+    margin-top: 0px;
+    line-height: 25px;
 }
 
 h5 {
     font-family: tahoma;
     color: white;
     font-size: 10pt;
+
+    line-height: 100%;
+}
+
+a {
+    color: rgb(188, 241, 241);
 }
 
 p {
@@ -52,16 +61,30 @@ p {
     height: 2px;
 }
 
-.centerRow {
+.topRow {
+    position: fixed;
+    top: 2vh;
+    left: 0%;
+    width: 100vw;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.94;
+}
+
+/* #mainMenu {
+    top: 48vh;
+} */
+
+.weekRow {
 
     position: fixed;
-    bottom: 3vh;
+    top: 90vh;
     left: 0%;
     margin-top: -50px;
     width: 100%;
 
     background-color: rgb(0, 0, 0);
-    opacity: 0.9;
+    opacity: 0.94;
     
 }
 
@@ -71,8 +94,7 @@ p {
     left: 0%;
     width: 100%;
 
-    background-color: black;
-    opacity: 0.95;    
+    background-color: black;    
 }
 
 .contentImg {
@@ -80,14 +102,23 @@ p {
     max-height: 100%;
 }
 
+.contentImg:hover {
+    /* position: fixed;
+    top: 10vh;
+    left: 10vh;
+    max-height: 80vh; */
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+
+    cursor: pointer;
+}
+
 .flexbox-container {
     display: flex;
     flex-direction: row;
-    /* height: 100px; */
     
     padding: 10px;
-
-    /* background-color: blue; */
 
 }
 
@@ -106,36 +137,28 @@ p {
     scrollbar-color: white black;
     scrollbar-width: thin;
     -webkit-scrollbar-button: none;
-
 }
 
-/* .weekBox {
+#menR {
+    overflow-x: auto;
+    overflow-y: hidden;
 
-    display: "block";
-    /* text-align: center; -/
+    gap: 20px;
 
-    width: 200px;
-    height: 60px;
-
-
-    background-color: rgb(0, 0, 0);
-
-    border-style: none;
-    /* border-color: white; -/
-
-} */
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    -webkit-scrollbar-button: none;
+}
 
 button {
     display: "block";
-    /* text-align: center; */
+    text-align: center;
 
     width: 200px;
     height: 60px;
+    flex-shrink: 0;
 
-
-    border-style: solid;
-    border-color: black;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 
     border-style: none;
     /* border-color: white; */
@@ -152,4 +175,25 @@ button:hover{
 .weeklyEntry {
     font-size: 100px;
     display: none;
+}
+
+.sketchBackground {
+    width: 102vw;
+    height: 102vh;
+    border: none;
+
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+}
+
+/* for some reason I can't figure out this is necessary to get the cursor i want on iframes */
+.invisibleDiv {
+    width: 90vw;
+    height: 100vh;
+    border: none;
+
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
 }
