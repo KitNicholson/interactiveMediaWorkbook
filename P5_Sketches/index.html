@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitNicholson_OnlineWorkbook</title>
+    <link rel="icon" type="image/x-icon" href="../Data/Favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script>
+      function changeSketch(sketchSCR, buttonId) {
+        document.getElementById("sketchFrame").src = sketchSCR;
+
+        // remove border from all buttons
+        const allButtons = document.getElementsByClassName("weekBox");
+        for (let i=0; i < allButtons.length; i++) {
+          let b = allButtons[i];
+          if (b.style.border === 'solid white') {
+            b.style.border = "";
+          }
+        }
+
+        // add border to activated week button
+        document.getElementById(buttonId).style.border = "solid";
+        document.getElementById(buttonId).style.borderColor = "white";
+
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <iframe class="sketchBackground" id="sketchFrame" src="Lewitt_50Points/index.html"></iframe>
+
+    <div class="topRow">
+      <div class="line"></div>
+      <div class="topText">
+        <br>
+        <a href="../index.html"> <h6> HOME </h6> </a>
+        <a href="../Weekly_Journal/index.html"> <h6> WEEKLY JOURNAL </h6> </a>
+        <a href="../Research_Journal/researchJournal_wCover.html" target=“_blank”> <h6> RESEARCH JOURNAL </h6> </a>
+        <br>
+      </div>
+      <div class="line"></div>
+    </div>
+
+    <div class="weekRow">
+      <div class="line"></div>
+      <div class="flexbox-container" id="menR">
+        <button class="weekBox" id="b1" onclick="changeSketch('Lewitt_50Points/index.html', 'b1')"> <h5>Lewitt - 50 Points</h5> </button>
+        <button class="weekBox" id="b2" onclick="changeSketch('Face_in_Text', 'b2')"> <h5>Face in Text</h5> </button>
+        <button class="weekBox" id="b3" onclick="changeSketch('Image_Manipulation/index.html', 'b3')"> <h5>Image Manipulation</h5> </button>
+        <button class="weekBox" id="b4" onclick="changeSketch('Video_Manipulation1_Slit/index.html', 'b4')"> <h5>Video Manipulation 1</h5> </button>
+        <button class="weekBox" id="b5" onclick="changeSketch('Video_Manipulation2_Comic/index.html', 'b5')"> <h5>Video Manipulation 2</h5> </button>
+        <button class="weekBox" id="b6" onclick="changeSketch('Video_Manipulation3_Strobe/index.html', 'b6')"> <h5>Video Manipulation 3<br> ~ Strobe Warning ~</h5> </button>
+        <button class="weekBox" id="b7" onclick="changeSketch('Splice_Video/index.html', 'b7')"> <h5>Splice Video</h5> </button>
+
+        <button class="weekBox" id="b8" onclick="changeSketch('Semi_Slitscan/index.html', 'b8')"> <h5>Semi-Slitscan</h5> </button>
+        <button class="weekBox" id="b9" onclick="changeSketch('Face_Delay/index.html', 'b9')"> <h5>Face Delay</h5> </button>
+        <button class="weekBox" id="b10" onclick="changeSketch('Data_Pie/index.html', 'b10')"> <h5>Data Pie</h5> </button>
+      </div>
+      <div class="line"></div>
+
+  </body>
+
+</html>
