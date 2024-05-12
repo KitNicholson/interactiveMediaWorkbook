@@ -166,7 +166,7 @@ function spawnText() {
 }
 
 function randomiseSettings() {
-  sizeText = random([30, 300, 500]);
+  sizeText = random([30, 250, 500]);
   globalFont = random(fonts);
   fr = random(12, maxFR);
 }
