@@ -277,6 +277,7 @@ function recordAudio() {
 
     // record to last sounfile in recordings array
     recorder.record(recordings[recordings.length - 1]);
+    console.log('recording start');
     // save delay time (time after beat), minus actuall system delay as a plus because we want the sound to play earlier on the count down.
     recDelay[recordings.length - 1] = beatTimer + 0.1;
     // add recTrigger value
@@ -299,6 +300,7 @@ function recordAudio() {
 
     // stop recorder and send result to soundFile
     recorder.stop();
+    console.log('recording stop');
     //console.log('recording stop')
 
 
